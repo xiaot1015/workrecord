@@ -1,0 +1,17 @@
+
+Warning: PHP Startup: vld: Unable to initialize module
+Module compiled with build ID=API20121212,NTS
+PHP    compiled with build ID=API20121212,NTS,debug
+These options need to match
+ in Unknown on line 0
+
+Warning: PHP Startup: vld: Unable to initialize module
+Module compiled with build ID=API20121212,NTS
+PHP    compiled with build ID=API20121212,NTS,debug
+These options need to match
+ in Unknown on line 0
+
+Warning: Module 'protobuf' already loaded in Unknown on line 0
+zend_vm_opcodes.h generated successfully.
+zend_vm_opcodes.c generated successfully.
+zend_vm_execute.h generated successfully.
