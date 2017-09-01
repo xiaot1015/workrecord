@@ -5971,7 +5971,7 @@ int main (int argc, char **argv) {
     init_lru_maintainer();
 
     /* set stderr non-buffering (for running under, say, daemontools) */
-    setbuf(stderr, NULL);  // 设置无缓冲区，直接操作stderr文件流
+    setbuf(stderr, NULL);
 
     char *shortopts =
           "a:"  /* access mask for unix socket */

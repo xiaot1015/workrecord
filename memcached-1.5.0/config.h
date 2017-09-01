@@ -17,10 +17,10 @@
 #define ENDIAN_LITTLE 1
 
 /* Define to 1 if support accept4 */
-/* #undef HAVE_ACCEPT4 */
+#define HAVE_ACCEPT4 1
 
 /* Define to 1 if you have the `clock_gettime' function. */
-/* #undef HAVE_CLOCK_GETTIME */
+#define HAVE_CLOCK_GETTIME 1
 
 /* Define this if you have an implementation of drop_privileges() */
 /* #undef HAVE_DROP_PRIVILEGES */
@@ -38,7 +38,7 @@
 /* #undef HAVE_GETPAGESIZES */
 
 /* Have ntohll */
-#define HAVE_HTONLL 1
+/* #undef HAVE_HTONLL */
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1

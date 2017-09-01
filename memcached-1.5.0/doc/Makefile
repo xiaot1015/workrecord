@@ -85,8 +85,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-build_triplet = x86_64-apple-darwin15.0.0
-host_triplet = x86_64-apple-darwin15.0.0
+build_triplet = i686-pc-linux-gnu
+host_triplet = i686-pc-linux-gnu
 #am__append_1 = protocol-binary.txt protocol-binary-range.txt
 subdir = doc
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -152,16 +152,16 @@ MANS = $(man_MANS)
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 am__DIST_COMMON = $(srcdir)/Makefile.in
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /Users/didi/src/memcached-1.5.0/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/xiaot/workrecord/memcached-1.5.0/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /Users/didi/src/memcached-1.5.0/missing autoconf
-AUTOHEADER = ${SHELL} /Users/didi/src/memcached-1.5.0/missing autoheader
-AUTOMAKE = ${SHELL} /Users/didi/src/memcached-1.5.0/missing automake-1.15
-AWK = awk
-CC = gcc
+AUTOCONF = ${SHELL} /home/xiaot/workrecord/memcached-1.5.0/missing autoconf
+AUTOHEADER = ${SHELL} /home/xiaot/workrecord/memcached-1.5.0/missing autoheader
+AUTOMAKE = ${SHELL} /home/xiaot/workrecord/memcached-1.5.0/missing automake-1.15
+AWK = mawk
+CC = gcc -std=gnu99
 CCDEPMODE = depmode=gcc3
-CFLAGS = -g -O2 -Wall -Werror -pedantic -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls
+CFLAGS = -g -O2 -pthread -pthread -Wall -Werror -pedantic -Wmissing-prototypes -Wmissing-declarations -Wredundant-decls
 CPP = gcc -E
 CPPFLAGS = 
 CYGPATH_W = echo
@@ -169,13 +169,13 @@ DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DTRACE = 
 DTRACEFLAGS = 
-ECHO_C = \c
-ECHO_N = 
+ECHO_C = 
+ECHO_N = -n
 ECHO_T = 
-EGREP = /usr/bin/grep -E
+EGREP = /bin/grep -E
 ENABLE_SASL = 
 EXEEXT = 
-GREP = /usr/bin/grep
+GREP = /bin/grep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
@@ -185,8 +185,8 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = -levent 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /Users/didi/src/memcached-1.5.0/missing makeinfo
-MKDIR_P = .././install-sh -c -d
+MAKEINFO = ${SHELL} /home/xiaot/workrecord/memcached-1.5.0/missing makeinfo
+MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = memcached
 PACKAGE_BUGREPORT = memcached@googlegroups.com
@@ -198,17 +198,17 @@ PACKAGE_VERSION = 1.5.0
 PATH_SEPARATOR = :
 PROFILER = /usr/bin/gcov
 PROFILER_FLAGS = -fprofile-arcs -ftest-coverage
-PROFILER_LDFLAGS = 
+PROFILER_LDFLAGS = -lgcov
 SET_MAKE = 
-SHELL = /bin/sh
+SHELL = /bin/bash
 STRIP = 
 VERSION = 1.5.0
 XML2RFC = no
-XSLTPROC = /usr/bin/xsltproc
-abs_builddir = /Users/didi/src/memcached-1.5.0/doc
-abs_srcdir = /Users/didi/src/memcached-1.5.0/doc
-abs_top_builddir = /Users/didi/src/memcached-1.5.0
-abs_top_srcdir = /Users/didi/src/memcached-1.5.0
+XSLTPROC = no
+abs_builddir = /home/xiaot/workrecord/memcached-1.5.0/doc
+abs_srcdir = /home/xiaot/workrecord/memcached-1.5.0/doc
+abs_top_builddir = /home/xiaot/workrecord/memcached-1.5.0
+abs_top_srcdir = /home/xiaot/workrecord/memcached-1.5.0
 ac_ct_CC = gcc
 am__include = include
 am__leading_dot = .
@@ -216,26 +216,26 @@ am__quote =
 am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 bindir = ${exec_prefix}/bin
-build = x86_64-apple-darwin15.0.0
+build = i686-pc-linux-gnu
 build_alias = 
-build_cpu = x86_64
-build_os = darwin15.0.0
-build_vendor = apple
+build_cpu = i686
+build_os = linux-gnu
+build_vendor = pc
 builddir = .
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = x86_64-apple-darwin15.0.0
+host = i686-pc-linux-gnu
 host_alias = 
-host_cpu = x86_64
-host_os = darwin15.0.0
-host_vendor = apple
+host_cpu = i686
+host_os = linux-gnu
+host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /Users/didi/src/memcached-1.5.0/install-sh
+install_sh = ${SHELL} /home/xiaot/workrecord/memcached-1.5.0/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -244,7 +244,7 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /Users/didi/webroot/memcache150
+prefix = /home/xiaot/memcache150
 program_transform_name = s,x,x,
 psdir = ${docdir}
 runstatedir = ${localstatedir}/run
@@ -500,16 +500,16 @@ uninstall-man: uninstall-man1
 
 
 protocol-binary.txt: protocol-binary.full
-	no -c /Users/didi/src/memcached-1.5.0/doc protocol-binary.full $@
+	no -c /home/xiaot/workrecord/memcached-1.5.0/doc protocol-binary.full $@
 
 protocol-binary-range.txt: protocol-binary-range.full
-	no -c /Users/didi/src/memcached-1.5.0/doc protocol-binary-range.full $@
+	no -c /home/xiaot/workrecord/memcached-1.5.0/doc protocol-binary-range.full $@
 
 protocol-binary.full: protocol-binary.xml xml2rfc/rfc2629-noinc.xsl
-	/usr/bin/xsltproc --nonet xml2rfc/rfc2629-noinc.xsl protocol-binary.xml > $@
+	no --nonet xml2rfc/rfc2629-noinc.xsl protocol-binary.xml > $@
 
 protocol-binary-range.full: protocol-binary-range.xml xml2rfc/rfc2629-noinc.xsl
-	/usr/bin/xsltproc --nonet xml2rfc/rfc2629-noinc.xsl protocol-binary-range.xml > $@
+	no --nonet xml2rfc/rfc2629-noinc.xsl protocol-binary-range.xml > $@
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
